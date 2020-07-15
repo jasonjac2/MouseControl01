@@ -1,0 +1,136 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 299
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 13
+    Width = 19
+    Height = 13
+    Caption = 'Left'
+  end
+  object Label2: TLabel
+    Left = 172
+    Top = 13
+    Width = 18
+    Height = 13
+    Caption = 'Top'
+  end
+  object Label3: TLabel
+    Left = 3
+    Top = 51
+    Width = 36
+    Height = 13
+    Caption = 'Monitor'
+  end
+  object AdvEdit1: TAdvEdit
+    Left = 45
+    Top = 8
+    Width = 121
+    Height = 21
+    EditType = etNumeric
+    EmptyTextStyle = []
+    FlatLineColor = 11250603
+    FocusColor = clWindow
+    FocusFontColor = 3881787
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    Lookup.Font.Charset = DEFAULT_CHARSET
+    Lookup.Font.Color = clWindowText
+    Lookup.Font.Height = -11
+    Lookup.Font.Name = 'Arial'
+    Lookup.Font.Style = []
+    Lookup.Separator = ';'
+    Color = clWindow
+    TabOrder = 0
+    Text = '20'
+    Visible = True
+    Version = '3.5.4.3'
+  end
+  object AdvEdit2: TAdvEdit
+    Left = 196
+    Top = 8
+    Width = 121
+    Height = 21
+    EditType = etNumeric
+    EmptyTextStyle = []
+    FlatLineColor = 11250603
+    FocusColor = clWindow
+    FocusFontColor = 3881787
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    Lookup.Font.Charset = DEFAULT_CHARSET
+    Lookup.Font.Color = clWindowText
+    Lookup.Font.Height = -11
+    Lookup.Font.Name = 'Arial'
+    Lookup.Font.Style = []
+    Lookup.Separator = ';'
+    Color = clWindow
+    TabOrder = 1
+    Text = '20'
+    Visible = True
+    Version = '3.5.4.3'
+  end
+  object chkbxActive: TCheckBox
+    Left = 368
+    Top = 16
+    Width = 97
+    Height = 17
+    Caption = 'active'
+    TabOrder = 2
+    OnClick = chkbxActiveClick
+  end
+  object spedMonitor: TSpinEdit
+    Left = 45
+    Top = 48
+    Width = 121
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 3
+    Value = 0
+  end
+  object chkbxClick: TCheckBox
+    Left = 368
+    Top = 39
+    Width = 97
+    Height = 17
+    Caption = 'Click'
+    TabOrder = 4
+    OnClick = chkbxActiveClick
+  end
+  object Memo1: TMemo
+    Left = 32
+    Top = 88
+    Width = 561
+    Height = 185
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 5
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 2000
+    OnTimer = Timer1Timer
+    Left = 56
+    Top = 200
+  end
+end
