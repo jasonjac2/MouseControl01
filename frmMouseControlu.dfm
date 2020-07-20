@@ -35,16 +35,25 @@ object Form2: TForm2
     Height = 13
     Caption = 'Monitor'
   end
+  object spbtnLeft: TSpeedButton
+    Left = 528
+    Top = 16
+    Width = 65
+    Height = 22
+    Caption = '&Left'
+    OnClick = spbtnLeftClick
+  end
   object AdvEdit1: TAdvEdit
     Left = 45
     Top = 8
     Width = 121
     Height = 21
-    EditType = etNumeric
     EmptyTextStyle = []
     FlatLineColor = 11250603
     FocusColor = clWindow
     FocusFontColor = 3881787
+    MinValue = -50000
+    MaxValue = 100000
     LabelFont.Charset = DEFAULT_CHARSET
     LabelFont.Color = clWindowText
     LabelFont.Height = -11
@@ -67,11 +76,12 @@ object Form2: TForm2
     Top = 8
     Width = 121
     Height = 21
-    EditType = etNumeric
     EmptyTextStyle = []
     FlatLineColor = 11250603
     FocusColor = clWindow
     FocusFontColor = 3881787
+    MinValue = -500000
+    MaxValue = 500000
     LabelFont.Charset = DEFAULT_CHARSET
     LabelFont.Color = clWindowText
     LabelFont.Height = -11
@@ -94,7 +104,7 @@ object Form2: TForm2
     Top = 16
     Width = 97
     Height = 17
-    Caption = 'active'
+    Caption = '&active'
     TabOrder = 2
     OnClick = chkbxActiveClick
   end

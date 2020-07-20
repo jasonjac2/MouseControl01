@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, CalcEdit, Vcl.ExtCtrls,
-  AdvEdit, Vcl.Samples.Spin;
+  AdvEdit, Vcl.Samples.Spin, Vcl.Buttons;
 
 type
   TForm2 = class(TForm)
@@ -19,9 +19,11 @@ type
     Label3: TLabel;
     chkbxClick: TCheckBox;
     Memo1: TMemo;
+    spbtnLeft: TSpeedButton;
     procedure chkbxActiveClick(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure spbtnLeftClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,6 +49,13 @@ end;
 procedure TForm2.FormCreate(Sender: TObject);
 begin
   spedMonitor.MaxValue:=Screen.MonitorCount;
+end;
+
+procedure TForm2.spbtnLeftClick(Sender: TObject);
+begin
+ AdvEdit1.Text:=IntToStr(strTointDef(AdvEdit1.Text,0)-50);
+ chkbxActiveClick(nil);
+
 end;
 
 procedure TForm2.Timer1Timer(Sender: TObject);
